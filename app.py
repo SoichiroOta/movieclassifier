@@ -47,7 +47,7 @@ def index():
     form = ReviewForm(request.form)
     return render_template('reviewform.html', form=form)
 
-@app.route('/request', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def results():
     form = ReviewForm(request.form)
     if request.method == 'POST' and form.validate():
