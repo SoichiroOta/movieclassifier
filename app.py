@@ -24,7 +24,7 @@ def classify(document):
     proba = clf.predict_proba(X).max()
     return label[y], proba
 
-def train(document):
+def train(document, y):
     X = vect.transform([document])
     clf.partial_fit(X, [y])
 
